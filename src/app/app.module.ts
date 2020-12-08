@@ -10,11 +10,19 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpClientModule } from "@angular/common/http";
+import { DefaultComponent } from './views/default/default.component';
+import { DetailsComponent } from './views/details/details.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CardDisplayComponent } from './components/card-display/card-display.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DefaultComponent,
+    DetailsComponent,
+    NavbarComponent,
+    CardDisplayComponent,
   ],
   imports: [
     BrowserModule,

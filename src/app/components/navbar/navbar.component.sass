@@ -1,0 +1,18 @@
+nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 2rem 1rem
+
+@media (min-width: 376px)
+    nav
+        padding: 2rem 2rem
+
+h2
+    font-size: 20px
+
+:host-context(.l) nav
+    background-color: var(--l-material)
+
+:host-context(.d) nav
+    background-color: var(--d-material)

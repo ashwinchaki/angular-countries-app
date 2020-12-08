@@ -129,5 +129,10 @@
       }
     }
   },
-  "defaultProject": "angular-countries-app"
+  "defaultProject": "angular-countries-app",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

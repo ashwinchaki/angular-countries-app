@@ -1,0 +1,7 @@
+<div class="overflow">
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap="wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around center">
+            <app-card-display fxFlex="calc(33% - 16px)" *ngFor="let country of countries | async" [country] = "country" class="shadow">
+            
+            </app-card-display>
+    </div>
+</div>
