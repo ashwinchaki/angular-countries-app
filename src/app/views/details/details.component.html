@@ -51,28 +51,43 @@
                     {{getTimezoneNames(country.timezones)}}
                 </p>
                 <p>
-                    <strong>Currencies: </strong>
-                    {{getCurrencyNames(country.currencies)}}
-                </p>
-                <p>
                     <strong>Languages: </strong>
                     {{getLanguageNames(country.languages)}}
                 </p>
             </mat-card>
+            <br>
+            <div class="extra-info">
+                <mat-card class="card shadow">
+                    <p>
+                        <strong>Currencies: </strong>
+                        {{getCurrencyNames(country.currencies)}}
+                    </p>
+                    <p>
+                        <strong>Gini Coefficient: </strong>
+                        {{country.gini}}
+                    </p>
+                    <p>
+                        <strong>Regional Blocs: </strong>
+                        {{getRegionalBlocs(country.regionalBlocs)}}
+                    </p>
+                </mat-card>
+            </div>
+            <br>
+            <div class="border-countries-card" *ngIf="borderCountries | async; let borderCountries">
+                <mat-card class="card shadow">
+                    <p><strong>Border Countries: </strong></p>
+                    <div class="border-countries">
+                        <div class="border-button" *ngFor='let bc of borderCountries' [routerLink]="'/' + bc.name">
+                            <button mat-raised-button color="primary">
+                                {{bc.name}}
+                            </button>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
         </div>
 
-        <div class="border-countries-card" *ngIf="borderCountries | async; let borderCountries">
-            <mat-card class="card shadow">
-                <p><strong>Border Countries: </strong></p>
-                <div class="border-countries">
-                    <div class="border-button" *ngFor='let bc of borderCountries' [routerLink]="'/' + bc.name">
-                        <button mat-raised-button color="primary">
-                            {{bc.name}}
-                        </button>
-                    </div>
-                </div>
-            </mat-card>
-        </div>
+
     </div>
 
 </div>

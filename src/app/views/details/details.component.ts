@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 
-import { Country, Language, Currency } from 'src/app/types/country';
+import { Country, Language, Currency, RegionalBloc } from 'src/app/types/country';
 
 @Component({
   selector: 'app-details',
@@ -45,6 +45,12 @@ export class DetailsComponent implements OnInit {
   getTimezoneNames(timezones: string[]) {
     return timezones.map(
       (timezone) => timezone
+    ).join(', ');
+  }
+
+  getRegionalBlocs(blocs: RegionalBloc[]) {
+    return blocs.map(
+      (bloc) => bloc.name
     ).join(', ');
   }
 
