@@ -1,7 +1,15 @@
+<div class="filters">
+    <form class="form">
+        <input type="text" [(ngModel)]="searchQuery" />
+    </form>
+</div>
+
+
 <div class="overflow">
-    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap="wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around center">
-            <app-card-display fxFlex="calc(33% - 16px)" *ngFor="let country of countries | async" [country] = "country" class="shadow">
-            
-            </app-card-display>
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap="wrap" fxLayoutGap="16px grid"
+        fxLayoutAlign="space-around center">
+        <app-card-display fxFlex="calc(25% - 16px)" *ngFor="let country of countries" [country]="country" class="card">
+
+        </app-card-display>
     </div>
 </div>

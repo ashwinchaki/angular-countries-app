@@ -1,18 +1,22 @@
-nav
+.navbar
     display: flex
     justify-content: space-between
     align-items: center
     padding: 2rem 1rem
 
 @media (min-width: 376px)
-    nav
+    .navbar
         padding: 2rem 2rem
 
 h2
     font-size: 20px
 
-:host-context(.l) nav
+:host-context(.l) .navbar
     background-color: var(--l-material)
+    .navbar-title
+        color: var(--l-text)
 
-:host-context(.d) nav
+:host-context(.d) .navbar
     background-color: var(--d-material)
+    .navbar-title
+        color: var(--d-text)

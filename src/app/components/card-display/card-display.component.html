@@ -1,12 +1,12 @@
-<div *ngIf="country" class="cardview shadow">
+<div *ngIf="country" class="cardview" [routerLink]="'/' + country.name">
     <mat-card>
         <mat-card-header>
             <mat-card-title class="cardbg">{{country.name}}</mat-card-title>
             <mat-card-subtitle class="cardbg">{{country.region}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src={{country.flag}} class="flagImage">
+        <img mat-card-image src={{country.flag}} class="flag-mage">
         <mat-card-content class="cardbg">
-            <h2>Population: {{country.population | number: "1.0"}} </h2>
+            <p><strong>Population: {{country.population | number: "1.0"}} </strong></p>
         </mat-card-content>
     </mat-card>
 </div>

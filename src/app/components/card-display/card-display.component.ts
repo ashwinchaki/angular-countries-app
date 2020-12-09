@@ -7,16 +7,16 @@ import { DarkmodeService } from 'src/app/services/darkmode.service';
   templateUrl: './card-display.component.html',
   styleUrls: ['./card-display.component.sass']
 })
-export class CardDisplayComponent implements OnInit{
+export class CardDisplayComponent implements OnInit {
   @Input()
-  country: Country
-  
+  country!: Country
+
   constructor(private darkmodeService: DarkmodeService) { }
 
   ngOnInit(): void {
-    
+
   }
 
-  
+
 
 }
