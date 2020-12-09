@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators'
 })
 export class ApiService {
   private endpoint = "https://restcountries.eu/rest/v2";
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
 
   }
 
@@ -18,7 +18,7 @@ export class ApiService {
   }
 
   GetCountryByFilter(filter: string) {
-    return this.http.get<Country[]>(`${this.endpoint}/name/${filter}`).pipe(map(([res]) => res));
+    return this.http.get<Country[]>(`${this.endpoint}/name/${filter}?fullText=true`).pipe(map(([res]) => res));
   }
 
   GetCountryByCode(codes: string[]) {
