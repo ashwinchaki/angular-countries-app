@@ -1,5 +1,5 @@
 <div *ngIf="country | async; let country">
-    <button mat-raised-button [routerLink]="'/'" color="primary">
+    <button mat-raised-button [routerLink]="'/'" color="primary" class="back">
         Back
     </button>
 
@@ -36,9 +36,7 @@
                     {{country.population | number : "1.0"}}
                 </p>
             </mat-card>
-        </div>
-
-        <div class="secondary-info">
+            <br>
             <mat-card class="secondary-info card shadow">
                 <p>
                     <strong>Demonym: </strong>
@@ -64,9 +62,9 @@
         </div>
 
         <div class="border-countries-card" *ngIf="borderCountries | async; let borderCountries">
-            <mat-card class="border-countries card shadow">
+            <mat-card class="card shadow">
+                <p><strong>Border Countries: </strong></p>
                 <div class="border-countries">
-                    <p><strong>Border Countries: </strong></p>
                     <div class="border-button" *ngFor='let bc of borderCountries' [routerLink]="'/' + bc.name">
                         <button mat-raised-button color="primary">
                             {{bc.name}}

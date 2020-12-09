@@ -24,17 +24,22 @@
         column-gap: 1rem
 
 .form
-    position: relative
+    box-sizing: border-box
     border-radius: 0.25rem
     font-size: 1rem
     padding: 1rem
     @media (min-width: 376px)
-        width: 50%
-    input
+        width: 33%
+    .search-input
         font-size: 1rem
-        border: none   
-        background-color: inherit
     .search-title
         font-size: 1rem
         padding-right: 1rem
-        
+
+:host-context(.l) input
+    background-color: var(--l-material)
+    color: var(--l-text)
+
+:host-context(.d) input
+    background-color: var(--d-material)
+    color: var(--d-text)

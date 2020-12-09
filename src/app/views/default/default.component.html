@@ -1,15 +1,11 @@
 <div class="filters">
     <div class="form">
-        <form>
-            <span class="search-title">Search</span>
-            <input type="text" [(ngModel)]="searchQuery" name="searchinput" />
-        </form>
+        <span class="search-title">Search</span>
+        <input type="text" [(ngModel)]="searchQuery" name="searchinput" class="search-input" />
     </div>
-    <div>
-        <app-region-filter [options]=" Regions" [(value)]="region">
+    <app-region-filter [options]=" Regions" [(value)]="region">
 
-        </app-region-filter>
-    </div>
+    </app-region-filter>
 </div>
 
 

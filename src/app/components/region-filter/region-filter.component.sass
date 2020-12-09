@@ -1,0 +1,40 @@
+.dropdown
+    position: relative
+    border-radius: 0.25rem
+    margin-top: 1rem
+    padding: 1rem
+    font-size: 1rem
+    @media (min-width: 376px)
+        margin-top: 0
+
+.options
+    border-radius: 0.25rem
+    position: absolute
+    top: 110%
+    left: 0
+    z-index: 10
+    width: 100%
+    list-style: none
+    padding-left: 1rem
+    padding-right: 1rem
+
+li
+    padding: 0.5rem
+
+.highlight
+    padding-left: 1rem
+    padding-right: 1rem
+    border-radius: 0.25rem
+    background-color: hsl(210, 90%, 75%)
+
+:host-context(.l)
+    .dropdown,
+    .options
+        background-color: var(--l-material)
+
+:host-context(.d)
+    .dropdown,
+    .options
+        background-color: var(--d-material)
+
+

@@ -31,7 +31,7 @@ export class DefaultComponent implements OnInit {
   get countries() {
     return this.countries$.filter((country) => { // filtering by search
       return this.searchQuery ?
-        country.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+        country.name.toLowerCase().startsWith(this.searchQuery.toLowerCase())
         : country; // returns all countries if nothing in search box
     }).filter((country) => {  // filtering by region
       return this.region ?
