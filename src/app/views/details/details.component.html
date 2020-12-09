@@ -2,20 +2,19 @@
     <button mat-raised-button [routerLink]="'/'" color="primary">
         Back
     </button>
-    
-    <div class="country-layout" fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap="wrap" fxLayoutGap="16px grid" fxLayoutAlign="space-around center">
+
+    <div class="country-layout">
         <div class="main-flag-card">
             <mat-card class="main-flag card shadow">
                 <mat-card-header>
                     <mat-card-title>{{country.name}}</mat-card-title>
                     <mat-card-subtitle class="subtitle">{{country.region}}</mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-img [src]="country.flag" class="flag-image"/>
+                <img mat-card-img [src]="country.flag" class="flag-image" />
             </mat-card>
         </div>
-        <div class="main-info-card">
+        <div class="primary-info">
             <mat-card class="main-info card shadow">
-            <div class="primary-info">
                 <p>
                     <strong>Native name: </strong>
                     {{country.nativeName}}
@@ -30,16 +29,17 @@
                 </p>
                 <p>
                     <strong>Latitude / Longitude: </strong>
-                    {{country.latlng[0]}} / {{country.latlng[1]}}
+                    {{country.latlng[0] | number: "1.0"}} / {{country.latlng[1] | number: "1.0"}}
                 </p>
                 <p>
                     <strong>Population: </strong>
                     {{country.population | number : "1.0"}}
                 </p>
-            </div>
             </mat-card>
-            <div class="secondary-info">
-                <mat-card class="secondary-info card shadow">
+        </div>
+
+        <div class="secondary-info">
+            <mat-card class="secondary-info card shadow">
                 <p>
                     <strong>Demonym: </strong>
                     {{country.demonym}}
@@ -61,19 +61,19 @@
                     {{getLanguageNames(country.languages)}}
                 </p>
             </mat-card>
-            </div>
-            <div class="border-countries-card">
+        </div>
+
+        <div class="border-countries-card" *ngIf="borderCountries | async; let borderCountries">
             <mat-card class="border-countries card shadow">
-            <div class="border-countries" *ngIf="borderCountries | async; let borderCountries">
-                <p><strong>Border Countries: </strong></p>
-                <div class="border-button" *ngFor='let bc of borderCountries' [routerLink]="'/' + bc.name">
-                    <button mat-raised-button color="primary">
-                        {{bc.name}}
-                    </button>
+                <div class="border-countries">
+                    <p><strong>Border Countries: </strong></p>
+                    <div class="border-button" *ngFor='let bc of borderCountries' [routerLink]="'/' + bc.name">
+                        <button mat-raised-button color="primary">
+                            {{bc.name}}
+                        </button>
+                    </div>
                 </div>
-            </div>
             </mat-card>
-            </div>
         </div>
     </div>
 

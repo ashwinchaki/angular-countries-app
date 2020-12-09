@@ -1,8 +1,10 @@
 <div class="filters">
-    <form class="form">
-        <input type="text" [(ngModel)]="searchQuery" name="searchinput" />
-    </form>
-
+    <div class="form">
+        <form>
+            <span class="search-title">Search</span>
+            <input type="text" [(ngModel)]="searchQuery" name="searchinput" />
+        </form>
+    </div>
     <div>
         <app-region-filter [options]=" Regions" [(value)]="region">
 
@@ -12,9 +14,8 @@
 
 
 <div class="overflow">
-    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap="wrap" fxLayoutGap="16px grid"
-        fxLayoutAlign="space-around center">
-        <app-card-display fxFlex="calc(25% - 16px)" *ngFor="let country of countries" [country]="country" class="card">
+    <div class="card-display">
+        <app-card-display *ngFor="let country of countries" [country]="country" class="card">
 
         </app-card-display>
     </div>
