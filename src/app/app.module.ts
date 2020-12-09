@@ -17,7 +17,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardDisplayComponent } from './components/card-display/card-display.component';
 import { RegionFilterComponent } from './components/region-filter/region-filter.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,1 +1,12 @@
-<p>region-filter works!</p>
+<div class="region-filter">
+    <div class="dropdown">
+        <div (click)="toggleOptions()">
+            <span>Filter by Region</span>
+        </div>
+        <ul *ngIf="showOptions" class="options">
+            <li *ngFor="let option of options" (click)="select(option)">
+                {{ option }}
+            </li>
+        </ul>
+    </div>
+</div>
