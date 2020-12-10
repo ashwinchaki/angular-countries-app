@@ -18,5 +18,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To setup:
 * First install [Node.js](https://nodejs.org/en/). 
-* After npm is installed, setup the [Angular CLI](https://github.com/angular/angular-cli) using the command `npm install -g @angular/cli` to install the CLI globally (adding it to your system's `$PATH$` variable). 
-* Then use `ng serve` to run the development server, hosted locally at `http://localhost:4200/`.
+* After npm is installed, use `npm install` to install the Angular CLI. 
+* Then use `ng serve` to run the development server, hosted locally at `http://localhost:4200/`. Initial setup will take longer, as node will need to install all dependencies before starting.
